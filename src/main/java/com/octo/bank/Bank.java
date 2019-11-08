@@ -9,8 +9,8 @@ public class Bank {
         this.mep = mep;
     }
     
-    public Money convert(Money currentMonney, Currency targetCurrency) {
-         ConversionRate rate = mep.fetchConversionRate(currentMonney.currency(), targetCurrency);
-         return rate.convert(currentMonney, targetCurrency); 
+    public Money convert(Money currentMoney, Currency targetCurrency) {
+         ConversionRate rate = mep.fetchConversionRate(currentMoney.currency(), targetCurrency);
+         return rate.convert(currentMoney); 
     }
 }
