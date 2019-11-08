@@ -11,6 +11,6 @@ public class Bank {
     
     public Money convert(Money currentMonney, Currency targetCurrency) {
          ConversionRate rate = mep.fetchConversionRate(currentMonney.currency(), targetCurrency);
-         return new Money(rate.applyTo(currentMonney.amount()), targetCurrency); 
+         return rate.convert(currentMonney, targetCurrency); 
     }
 }
